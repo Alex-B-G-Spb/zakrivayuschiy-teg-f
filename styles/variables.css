@@ -1,7 +1,7 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
     --main_font: 'Inter-Variable', 'Oswald', 'Arial', sans-serif;
-    --title_font: 'Press Start 2P', 'fantasy', sans-serif;
+    --title_font: 'Press Start 2P', fantasy, sans-serif;
     --normal:400;
     --bold: 700;
     --background-image: 

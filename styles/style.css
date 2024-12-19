@@ -9,6 +9,7 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
+* { outline: 1px solid red; }
 
 .page {
   min-inline-size: 320px;
@@ -36,13 +37,14 @@
   margin-block-start: 102px;
   margin-block-end: 102px;
   inline-size: clamp(1rem, -1.3364rem + 9.9688vw, 3rem);
-  block-size: clamp(327px,-1.3364rem + 9.9688vw,368px);
   max-width: 700px;
   width: 100%;
   border: 2px solid black;
   text-transform: uppercase;
   font-family: var(--title_font);
   background-color: white;
+  padding-block-start: 128px;
+  padding-block-end: 128px;
 }
 
 .header_title {
@@ -78,7 +80,7 @@
 }
 
 .card_title {
-  font-variation-settings: "wgt" var(--bold);
+  font-variation-settings: "wght" var(--bold);
   line-height: 21.78px;
   padding: 5px 10px 5px 10px;
   font-weight: var(--bold);
@@ -139,12 +141,22 @@
   gap: 10px;
 }
 
+.button {
+  background-color:white;
+  line-height: 12.6px;
+  cursor: pointer;
+  border: 2px solid black;
+  font-family: var(--title_font);
+  font-size: 14px;
+}
+
 .button:focus {
   outline: none;
 }
 
 .button:focus-visible {
-  box-shadow: 2px 2px 0 var(--button-accent-color, #000);
+  box-shadow: 2px 2px 0 black;
+  transition: box-shadow 0.3s ease;
 }
 
 .button::after {
@@ -164,25 +176,15 @@
 .button:hover .button__text {
   z-index: 1;
   color:white;
-  transition: 0.5s ease-in-out;
+  mix-blend-mode: difference;
 }
 
 .card__icon-button {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: transparent;
   border: none;
   padding: 0px;
-  cursor: pointer;
-}
-
-.card__icon-button:focus {
-  outline: none;
-}
-
-.card__icon-button:focus-visible {
-  outline: 2px solid black;
 }
 
 .like-icon {
@@ -240,23 +242,8 @@
 
 .card__like-button {
   position: relative;
-  border: 2px solid black;
-  font-family: var(--title_font);
-  font-size: 14px;
-  cursor: pointer;
   inline-size: 130px;
   block-size: 39px;
-  background-color:white;
-  line-height: 12.6px;
-}
-
-.card__like-button:focus {
-  outline: none;
-}
-
-.card__like-button:focus-visible {
-  box-shadow: 2px 2px 0 black;
-  transition: box-shadow 0.3s ease;
 }
 
 .button__text {
@@ -265,10 +252,6 @@
   font-size: 14px;
   text-transform: capitalize;
   color: black;
-}
-
-.footer {
-  padding-block: 0 105px;
 }
 
 .save_button {
@@ -281,8 +264,6 @@
   gap: 0.53rem;
   inline-size: clamp(310px, 81.6vw, 339px);
   block-size: clamp(55px, calc(84px - (84 - 55) * ((100vw - 375px) / (1440 - 375))), 84px);
-  font-family: var(--title_font);
-  font-size: 14px;
 }
 
 .save_button svg {
@@ -343,12 +324,6 @@ use {
   text-transform: uppercase;
   inline-size: 100%;
   block-size: 2.375rem;
-  font-family: var(--title_font);
-  font-size: 14px;
-  border: 2px solid black;
-  cursor: pointer;
-  background-color:white;
-  line-height: 12.6px;
 }
 
 @media (width <= 600px) {
