@@ -36,9 +36,7 @@
   align-content:center;
   margin-block-start: 102px;
   margin-block-end: 102px;
-  inline-size: clamp(1rem, -1.3364rem + 9.9688vw, 3rem);
   max-width: 700px;
-  width: 100%;
   border: 2px solid black;
   text-transform: uppercase;
   font-family: var(--title_font);
@@ -48,7 +46,7 @@
 }
 
 .header_title {
-  font-size: 65px;
+  font-size: var(--header-title-accent-size, clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem));
   line-height: 65px;
   font-weight: 400;
 }
